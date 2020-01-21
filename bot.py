@@ -378,7 +378,7 @@ def start_game(bot, update, args, job_queue):
 
             for player in game.players:
                 player.draw_first_hand()
-            choice = [[InlineKeyboardButton(text=_("Make your choice!"), switch_inline_query_current_chat='')]]
+            choice = [[InlineKeyboardButton(text=_("Jogar"), switch_inline_query_current_chat='')]]
             first_message = (
                 __("First player: {name}\n"
                    "Use /close to stop people from joining the game.\n"
