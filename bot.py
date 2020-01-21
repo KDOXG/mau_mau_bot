@@ -711,7 +711,7 @@ def process_result(bot, update, job_queue):
         nextplayer_message = (
             __("Next player: {name}", multi=game.translate)
             .format(name=display_name(game.current_player.user)))
-        choice = [[InlineKeyboardButton(text=_("Make your choice!"), switch_inline_query_current_chat='')]]
+        choice = [[InlineKeyboardButton(text=_("Jogar"), switch_inline_query_current_chat='')]]
         send_async(bot, chat.id,
                         text=nextplayer_message,
                         reply_markup=InlineKeyboardMarkup(choice))
