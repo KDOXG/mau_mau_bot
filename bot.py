@@ -68,6 +68,7 @@ def notify_me(bot, update):
         send_async(bot,
                    chat_id,
                    text=_("Você será notificado com uma mensagem quando um novo jogo for iniciado."))
+        
 @user_locale
 def new_game(bot, update):
     """Handler for the /new command"""
