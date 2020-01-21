@@ -172,7 +172,8 @@ class Player(object):
                 card.value == c.DRAW_TWO and self.game.draw_counter:
             self.logger.debug("Player has to draw and can't counter")
             is_playable = False
-        elif last.special == c.DRAW_FOUR and self.game.draw_counter:
+        elif last.special == c.DRAW_FOUR and not \
+                card.special == c.DRAW_FOUR and self.game.draw_counter:
             self.logger.debug("Player has to draw and can't counter")
             is_playable = False
         elif (last.special == c.CHOOSE or last.special == c.DRAW_FOUR) and \
