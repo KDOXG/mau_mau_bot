@@ -152,8 +152,8 @@ class Player(object):
                 self.bluffing = (self.bluffing or card.color == last.color)
 
         # You may not play a chooser or +4 as your last card
-        if len(self.cards) == 1 and self.cards[0].special:
-            return list()
+        # if len(self.cards) == 1 and self.cards[0].special:
+        #    return list()
 
         return playable
 
