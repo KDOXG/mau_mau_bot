@@ -631,9 +631,6 @@ def reply_to_query(bot, update):
                 else:
                     add_pass(results, game)
 
-                if game.last_card.special == c.DRAW_FOUR and game.draw_counter:
-                    add_call_bluff(results, game)
-
                 playable = player.playable_cards()
                 added_ids = list()  # Duplicates are not allowed
 
